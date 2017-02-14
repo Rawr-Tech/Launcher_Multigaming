@@ -2,11 +2,11 @@
 
 return [
     'languages' => [
-        'en' => [
-            'name' => 'English'
+        'uk' => [
+            'name' => 'English (UK)'
         ],
         'fr' => [
-            'name' => 'French'
+            'name' => 'Français'
         ]
     ]
 ];

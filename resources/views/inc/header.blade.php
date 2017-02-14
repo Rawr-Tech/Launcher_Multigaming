@@ -8,7 +8,8 @@
             <!-- Raw Notifications -->
             <li class="notifications dropdown">
 
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
+                   data-close-others="true">
                     <i class="entypo-attention"></i>
                     <span class="badge badge-info">6</span>
                 </a>
@@ -28,12 +29,12 @@
                                     <i class="entypo-user-add pull-right"></i>
 
                                     <span class="line">
-												<strong>New user registered</strong>
-											</span>
+                                        <strong>New user registered</strong>
+                                    </span>
 
                                     <span class="line small">
-												30 seconds ago
-											</span>
+                                        {{ $errors->all }}
+                                    </span>
                                 </a>
                             </li>
 
@@ -119,7 +120,8 @@
             <!-- Message Notifications -->
             <li class="notifications dropdown">
 
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
+                   data-close-others="true">
                     <i class="entypo-mail"></i>
                     <span class="badge badge-secondary">10</span>
                 </a>
@@ -129,7 +131,7 @@
                         <form class="top-dropdown-search">
 
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Search anything..." name="s" />
+                                <input type="text" class="form-control" placeholder="Search anything..." name="s"/>
                             </div>
 
                         </form>
@@ -138,7 +140,8 @@
                             <li class="active">
                                 <a href="#">
 											<span class="image pull-right">
-												<img src="/assets/images/thumb-1@2x.png" width="44" alt="" class="img-circle" />
+												<img src="/assets/images/thumb-1@2x.png" width="44" alt=""
+                                                     class="img-circle"/>
 											</span>
 
                                     <span class="line">
@@ -155,7 +158,8 @@
                             <li class="active">
                                 <a href="#">
 											<span class="image pull-right">
-												<img src="/assets/images/thumb-2@2x.png" width="44" alt="" class="img-circle" />
+												<img src="/assets/images/thumb-2@2x.png" width="44" alt=""
+                                                     class="img-circle"/>
 											</span>
 
                                     <span class="line">
@@ -172,7 +176,8 @@
                             <li>
                                 <a href="#">
 											<span class="image pull-right">
-												<img src="/assets/images/thumb-3@2x.png" width="44" alt="" class="img-circle" />
+												<img src="/assets/images/thumb-3@2x.png" width="44" alt=""
+                                                     class="img-circle"/>
 											</span>
 
                                     <span class="line">
@@ -189,7 +194,8 @@
                             <li>
                                 <a href="#">
 											<span class="image pull-right">
-												<img src="/assets/images/thumb-4@2x.png" width="44" alt="" class="img-circle" />
+												<img src="/assets/images/thumb-4@2x.png" width="44" alt=""
+                                                     class="img-circle"/>
 											</span>
 
                                     <span class="line">
@@ -215,7 +221,8 @@
             <!-- Task Notifications -->
             <li class="notifications dropdown">
 
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
+                   data-close-others="true">
                     <i class="entypo-list"></i>
                     <span class="badge badge-warning">1</span>
                 </a>
@@ -336,15 +343,15 @@
 
                 Language: &nbsp;
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-close-others="true">
-                    <img src="/assets/images/flags/flag-{{  Auth::user()->lang }}.png" width="16" height="16" />
+                    <img src="/assets/images/flags/flag-{{  Auth::user()->lang }}.png" width="16" height="16"/>
                 </a>
 
                 <ul class="dropdown-menu pull-right">
-                    @foreach(config('languages') as $item)
-                        <li class="{{ Auth::user()->lang == $item['flag'] ? 'active' : '' }}">
-                            <a href="/account/update/lang/{{ $item['flag'] }}">
-                                <img src="/assets/images/flags/flag-{{ $item['flag'] }}.png" width="16" height="16" />
-                                <span>{{ $item['lang'] }}</span>
+                    @foreach(config('custom.languages') as $key => $item)
+                        <li class="{{ Auth::user()->lang == $key ? 'active' : '' }}">
+                            <a href="/account/update/lang/{{ $key }}">
+                                <img src="/assets/images/flags/flag-{{ $key }}.png" width="16" height="16"/>
+                                <span>{{ $item['name'] }}</span>
                             </a>
                         </li>
                     @endforeach

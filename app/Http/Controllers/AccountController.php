@@ -21,8 +21,8 @@ class AccountController extends Controller
             $user->save();
             return redirect()->back();
         }
-        // Not sure what you planned on doing here when the lang was not in the config
-//        return redirect()->back()->withErrors();
+
+        return redirect()->back()->withErrors(['default' => ['type' => 'popup', 'message' => 'Error when would to change language, ' . $lang . ' this languages does\'t exists !']]);
     }
 
     function myAccount()
