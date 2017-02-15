@@ -2,8 +2,8 @@
 
 return [
     'languages' => [
-        'uk' => [
-            'name' => 'English (UK)'
+        'en' => [
+            'name' => 'English'
         ],
         'fr' => [
             'name' => 'Français'
