@@ -17,7 +17,7 @@ class SeederAccounts extends Seeder
             'password' => Hash::make('secret'),
             'name' => "bite",
         ]);
-	DB::table('users')->insert([
+	    DB::table('users')->insert([
             'username' => "FrenChQWerTy",
             'email' => 'frenchqwerty@gmail.com',
             'password' => Hash::make('secret'),
