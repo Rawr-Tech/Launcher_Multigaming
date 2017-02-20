@@ -22,7 +22,15 @@ class AccountController extends Controller
             return redirect()->back();
         }
 
-        return redirect()->back()->withErrors(['default' => ['type' => 'popup', 'message' => 'Error when would to change language, ' . $lang . ' this languages does\'t exists !']]);
+        return redirect()->back()->withErrors([
+            'alert' =>
+                [
+                    'type' => 'popup',
+                    'title' => "Language not found",
+                    'message' => 'Error when would to change language, ' . $lang . ' this languages does\'t exists !',
+                    'style' => 'warning'
+                ]
+        ]);
     }
 
     function myAccount()

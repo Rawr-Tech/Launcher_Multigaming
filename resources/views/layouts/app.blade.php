@@ -21,8 +21,12 @@
     <link rel="stylesheet" href="/assets/css/neon-forms.css">
     <link rel="stylesheet" href="/assets/css/custom.css">
     <link rel="stylesheet" href="/assets/css/skins/cafe.css">
+    <link rel="stylesheet" href="/assets/css/alerts/sweetalert.css">
 
     <script src="/assets/js/jquery-1.11.3.min.js"></script>
+
+    <!-- SweetAlert load -->
+    <script src="/assets/js/alerts/sweetalert.min.js"></script>
 
     <!--[if lt IE 9]><script src="/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 

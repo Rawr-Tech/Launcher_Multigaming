@@ -1,3 +1,26 @@
+<!-- TMP ALERT SYSTEM -->
+
+@if ($errors->has('alert'))
+    @if ($errors->get('alert')['type'] == 'popup')
+        <script>
+            $(function() {
+                sweetAlert("{{ $errors->get('alert')['title'] }}", "{{ $errors->get('alert')['message'] }}", "{{ $errors->get('alert')['style'] }}");
+            });
+        </script>
+    @elseif ($errors->get('alert')['type'] == 'default')
+        <div class="alert alert-danger">
+            <ul>
+                {{ $errors->get('alert')['type'] }}
+                {{ $errors->get('alert')['message'] }}
+            </ul>
+        </div>
+    @endif
+@endif
+
+<!-- END TMP ALERT SYSTEM -->
+
+
+
 <div class="row">
 
     <!-- Profile Info and Notifications -->
@@ -33,7 +56,7 @@
                                     </span>
 
                                     <span class="line small">
-                                        {{ $errors->all }}
+                                     TEST
                                     </span>
                                 </a>
                             </li>
