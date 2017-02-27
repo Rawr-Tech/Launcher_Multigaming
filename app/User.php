@@ -5,11 +5,17 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Zizaco\Entrust\Traits\EntrustUserTrait;
+use Webpatser\Uuid\Uuid;
 
 class User extends Authenticatable
 {
     use Notifiable;
-    use EntrustUserTrait;
+    use EntrustUserTrait, Uuids
+    {
+        Uuids::boot insteadof EntrustUserTrait;
+    }
+
+    public $incrementing = false;
 
     /**
      * The attributes that are mass assignable.
@@ -17,7 +23,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'username', 'password',
+        'name', 'email', 'username', 'password', 'id', 'avatar'
     ];
 
     /**

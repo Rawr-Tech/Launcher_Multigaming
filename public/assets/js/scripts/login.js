@@ -71,6 +71,7 @@ var neonLogin = neonLogin || {};
 						},
 						error: function(response)
 						{
+							console.log(response);
 							if (response.status == 200)
 							{
                                 // Form is fully completed, we update the percentage
