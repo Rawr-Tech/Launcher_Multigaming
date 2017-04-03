@@ -26,5 +26,12 @@ class SeederAccounts extends Seeder
             'password' => Hash::make('secret'),
             'name' => "ArabeSauvage"
         ]);
+        DB::table('users')->insert([
+            'id' => str_replace('-', '', Uuid::generate(3, 'Wirk', Uuid::NS_DNS)),
+            'username' => "Wirk",
+            'email' => 'contact@wirk.fr',
+            'password' => Hash::make('secret'),
+            'name' => "Saber"
+        ]);
     }
 }
