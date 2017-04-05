@@ -1,0 +1,8 @@
+{
+  "app":  "Launcher with laravel",
+  "server": {
+    "ip": "localhost",
+    "port": 2302,
+    "name": "TEST"
+  }
+}
