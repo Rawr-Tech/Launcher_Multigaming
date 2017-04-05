@@ -181,6 +181,9 @@ return [
         /* APP PERMISSIONS */
         Zizaco\Entrust\EntrustServiceProvider::class,
 
+        /* IDE HELPER*/
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+
     ],
 
     /*
