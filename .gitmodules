@@ -1,3 +1,3 @@
-[submodule "laradock"]
+[submodule "laravelDocker"]
 	path = laradock
-	url = https://github.com/LaraDock/laradock.git
+	url = https://github.com/iWirk/laradock.git
