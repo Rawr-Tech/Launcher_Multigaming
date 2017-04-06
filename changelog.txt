@@ -1,5 +1,5 @@
 *** Neon Theme - Changelog ***
-
+ 
 - Nov 05, 2015 v 2.0
 
 	IMPORTANT FIX: Compatibility with Safari 9.x on El Capitan and iOS9 added
