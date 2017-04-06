@@ -47,7 +47,7 @@ class StartDockerCommand extends Command
             $this->info('Done');
             return true;
         } else {
-            return shell_exec("cd laradock/ && docker-compose stop nginx php-fpm mariadb beanstalkd redis");
+            return shell_exec("cd laradock/ && docker-compose up -d nginx php-fpm mariadb beanstalkd redis");
         }
     }
 }
