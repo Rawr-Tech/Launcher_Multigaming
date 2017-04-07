@@ -77,7 +77,7 @@ return [
     |
     */
 
-    'locale' => 'fr',
+    'locale' => 'en',
 
     /*
     |--------------------------------------------------------------------------
@@ -90,7 +90,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'fr',
 
     /*
     |--------------------------------------------------------------------------
@@ -184,6 +184,9 @@ return [
         /* IDE HELPER*/
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
 
+        /* DATA TABLES */
+        Yajra\Datatables\DatatablesServiceProvider::class,
+
     ],
 
     /*
@@ -234,6 +237,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Entrust'   => Zizaco\Entrust\EntrustFacade::class,
         'Uuid' => Webpatser\Uuid\Uuid::class,
+        'Datatables' => Yajra\Datatables\Facades\Datatables::class,
 
     ],
 

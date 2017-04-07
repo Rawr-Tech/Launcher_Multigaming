@@ -63,7 +63,7 @@
                 </a>
                 <ul class="visible">
                     <li>
-                        <a href="/users">
+                        <a href="/search/user">
                             <span class="title">Search an user</span>
                         </a>
                     </li>

@@ -2000,7 +2000,7 @@
         // Adds `ARIA attributes` to the dropdown list
         self.dropdownContainer.attr({
 
-            // W3C `combobox` description: A presentation of a select; usually similar to a textbox where users can type ahead to select an option.
+            // W3C `combobox` description: A presentation of a select; usually similar to a textbox where user can type ahead to select an option.
             "role": "combobox",
 
             //W3C `aria-autocomplete` description: Indicates whether user input completion suggestions are provided.

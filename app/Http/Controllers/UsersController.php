@@ -15,6 +15,6 @@ class UsersController extends Controller
     function profile(Request $request, $id)
     {
         $user = User::findOrFail($id);
-        return view('users.profile', ['me' => false, 'user' => $user]);
+        return view('user.profile', ['me' => false, 'user' => $user]);
     }
 }

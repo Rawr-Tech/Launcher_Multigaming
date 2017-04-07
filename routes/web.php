@@ -14,6 +14,10 @@
 Auth::routes();
 
 Route::get('/', 'HomeController@index');
+Route::get('/home', function()
+{
+    return redirect('/');
+});
 
 Route::group(['prefix' => 'account'], function ()
 {
@@ -24,7 +28,17 @@ Route::group(['prefix' => 'account'], function ()
     });
 });
 
-Route::group(['prefix' => 'users'], function()
+Route::group(['prefix' => 'user'], function()
 {
     Route::get('/{id}', ['uses' => 'UsersController@profile', 'as' => 'id']);
+});
+
+/*
+ * Search routes
+ */
+
+Route::group(['prefix' => 'search'], function()
+{
+    Route::get('/user', "SearchController@searchUser");
+    Route::get('/', "SearchController@searchAll");
 });

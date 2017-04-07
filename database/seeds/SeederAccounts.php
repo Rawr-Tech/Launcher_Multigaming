@@ -12,21 +12,21 @@ class SeederAccounts extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
+        DB::table('user')->insert([
             'id' => str_replace('-', '', Uuid::generate(3, 'MrDarkSkil', Uuid::NS_DNS)),
             'username' => "MrDarkSkil",
             'email' => 'leohub@live.fr',
             'password' => Hash::make('secret'),
             'name' => "TEST",
         ]);
-	    DB::table('users')->insert([
+	    DB::table('user')->insert([
             'id' => str_replace('-', '', Uuid::generate(3, 'FrenChQWerTy', Uuid::NS_DNS)),
             'username' => "FrenChQWerTy",
             'email' => 'frenchqwerty@gmail.com',
             'password' => Hash::make('secret'),
             'name' => "ArabeSauvage"
         ]);
-        DB::table('users')->insert([
+        DB::table('user')->insert([
             'id' => str_replace('-', '', Uuid::generate(3, 'Wirk', Uuid::NS_DNS)),
             'username' => "Wirk",
             'email' => 'contact@wirk.fr',
