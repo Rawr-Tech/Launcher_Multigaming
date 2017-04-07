@@ -67,6 +67,11 @@ var neonRegister = neonRegister || {};
 					neonRegister.setPercentage(98, function()
 					{
 						// Send data to the server
+                        $.ajaxSetup({
+                            headers: {
+                                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                            }
+                        });
 						$.ajax({
 							url: '/register',
 							method: 'POST',

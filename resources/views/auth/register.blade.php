@@ -8,6 +8,8 @@
     <meta name="description" content="Neon Admin Panel" />
     <meta name="author" content="" />
 
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <link rel="icon" href="/assets/images/favicon.ico">
 
     <title>Neon | Register</title>
