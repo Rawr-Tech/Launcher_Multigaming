@@ -37,6 +37,6 @@ class StopDockerCommand extends Command
      */
     public function handle()
     {
-        return shell_exec("cd laradock/ && docker-compose stop nginx php-fpm mariadb beanstalkd redis workspace");
+        return shell_exec("cd laradock/ && docker-compose stop nginx php-fpm mariadb beanstalkd redis workspace php-worker");
     }
 }

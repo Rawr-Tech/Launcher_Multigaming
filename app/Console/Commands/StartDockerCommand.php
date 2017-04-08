@@ -41,13 +41,13 @@ class StartDockerCommand extends Command
 
         if ($opts['migrate'] || $opts['refresh']) {
             $txt = ($opts['migrate']) ? 'migrate' : 'refresh';
-            shell_exec("cd laradock/ && docker-compose up -d nginx php-fpm mariadb beanstalkd redis");
+            shell_exec("cd laradock/ && docker-compose up -d nginx php-fpm mariadb beanstalkd redis php-worker");
             $this->info("Trying to $txt the database...");
             shell_exec("cd laradock/ && docker-compose exec workspace bash -c 'php artisan migrate:refresh --seed'");
             $this->info('Done');
             return true;
         } else {
-            return shell_exec("cd laradock/ && docker-compose up -d nginx php-fpm mariadb beanstalkd redis");
+            return shell_exec("cd laradock/ && docker-compose up -d nginx php-fpm mariadb beanstalkd redis php-worker");
         }
     }
 }
