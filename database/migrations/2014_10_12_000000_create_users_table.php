@@ -22,6 +22,8 @@ class CreateUsersTable extends Migration
             $table->string('avatar')->default('default.jpg');
             $table->string('password');
             $table->rememberToken();
+            $table->boolean('confirmed')->default(false);
+            $table->string('confirmation_token')->nullable();
             $table->timestamps();
         });
 
@@ -34,6 +36,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user');
+        Schema::dropIfExists('users');
     }
 }

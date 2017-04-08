@@ -82,7 +82,8 @@ var neonRegister = neonRegister || {};
 								birthdate: 	$("input#birthdate").val(),
 								username: 	$("input#username").val(),
 								email: 		$("input#email").val(),
-								password:	$("input#password").val()
+								password:	$("input#password").val(),
+                                password_confirmation:	$("input#password_confirmation").val()
 							},
 							error: function(response)
 							{

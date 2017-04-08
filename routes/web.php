@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,6 +17,8 @@ Route::get('/home', function()
 {
     return redirect('/');
 });
+
+Route::get('/register/confirm/{token}', ["uses" =>"\\App\\Http\\Controllers\\Auth\\RegisterController@confirm", "as" => "token"]);
 
 Route::group(['prefix' => 'account'], function ()
 {

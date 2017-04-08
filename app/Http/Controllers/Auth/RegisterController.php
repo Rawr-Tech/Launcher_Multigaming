@@ -6,6 +6,10 @@ use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Jobs\SendConfirmationEmail;
+use Illuminate\Support\Facades\DB;
 
 class RegisterController extends Controller
 {
@@ -49,9 +53,9 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => 'required|max:255',
-            'email' => 'required|email|max:255|unique:user',
-            'username' => 'required|max:30|unique:user',
-            'password' => 'required|min:6|confirmed',
+            'email' => 'required|email|max:255|unique:users',
+            'username' => 'required|max:30|unique:users',
+            'password' => 'required|min:6',
         ]);
     }
 
@@ -63,11 +67,24 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'username' => $data['username'],
             'password' => bcrypt($data['password']),
+            'confirmation_token' => sha1(str_random()),
         ]);
+
+        dispatch(new SendConfirmationEmail($user));
+
+        return $user;
+    }
+
+    public function confirm($token)
+    {
+        Auth::logout();
+        $user = User::where('confirmation_token', $token)->firstOrFail();
+        $user->confirm($user);
+        return redirect('login');
     }
 }
