@@ -5673,7 +5673,7 @@ fieldset[disabled] .calendar-env .calendar-body .fc-content .fc-view table tbody
 }
 .profile-env > header {
   position: relative;
-  z-index: 20;
+  z-index: 2;
   margin-top: 30px;
 }
 .profile-env > header .profile-picture {
@@ -5809,7 +5809,7 @@ fieldset[disabled] .calendar-env .calendar-body .fc-content .fc-view table tbody
 }
 .profile-env section {
   position: relative;
-  z-index: 10;
+  z-index: 1;
 }
 .profile-env section.profile-info-tabs {
   position: relative;

@@ -86,10 +86,13 @@ var neonLogin = neonLogin || {};
                                 return;
 
 							}
+                            else if (response.responseJSON && typeof response.responseJSON.username)
+                            {
+                                $('#error-message').html("<p>" + response.responseJSON.username + "</p>");
+                            }
 							else
-							if (typeof response.responseJSON.username)
-							{
-								$('#error-message').html("<p>" + response.responseJSON.username + "</p>");
+                            {
+                                $('#error-message').html("<p> Error system " + response.status + "</p>");
 							}
                             $(".login-page").removeClass('logging-in');
                             neonLogin.resetProgressBar(true);
