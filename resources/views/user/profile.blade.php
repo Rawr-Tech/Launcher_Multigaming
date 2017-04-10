@@ -2,12 +2,63 @@
 
 @section('content')
     <div class="profile-env">
+        <div class="modal fade" id="update-avatar">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form method="post" role="form" id="form_avatar" action="/test">
 
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">Modal Content is Responsive</h4>
+                        </div>
+
+                        <div class="modal-body">
+
+                            <div class="row">
+                                <div class="col-md-12">
+
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">Image Upload</label>
+
+                                        <div class="col-sm-5">
+
+                                            <div class="fileinput fileinput-new" data-provides="fileinput">
+                                                <div class="fileinput-new thumbnail" style="width: 200px; height: 150px;" data-trigger="fileinput">
+                                                    <img src="/upload/avatars/{{ $user->avatar }}" alt="Current user avatar">
+                                                </div>
+                                                <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px"></div>
+                                                <div>
+                                                <span class="btn btn-white btn-file">
+                                                    <span class="fileinput-new">Select image</span>
+                                                    <span class="fileinput-exists">Change</span>
+                                                    <input type="file" name="avatar" accept="image/*">
+                                                </span>
+                                                    <a href="#" class="btn btn-orange fileinput-exists" data-dismiss="fileinput">Remove</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-info">Save changes</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
         <header class="row">
 
             <div class="col-sm-2">
 
-                <a href="#" class="profile-picture">
+                <a href="javascript:" @if ($me) onclick="jQuery('#update-avatar').modal('show', {backdrop: 'static'});" @endif class="profile-picture">
                     <img src="/upload/avatars/{{ $user->avatar }}" class="img-responsive img-circle"/>
                 </a>
 

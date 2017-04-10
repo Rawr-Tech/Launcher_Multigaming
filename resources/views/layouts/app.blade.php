@@ -91,6 +91,7 @@
 
 <!-- JavaScripts initializations and stuff -->
 <script src="/assets/js/neon-custom.js"></script>
+<script src="/assets/js/fileinput.js"></script>
 
 
 <!-- Demo Settings -->

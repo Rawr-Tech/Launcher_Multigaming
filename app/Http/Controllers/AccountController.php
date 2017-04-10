@@ -7,12 +7,12 @@ use Illuminate\Support\Facades\Auth;
 
 class AccountController extends Controller
 {
-    function __construct()
+    public function __construct()
     {
         $this->middleware('auth');
     }
 
-    function updateLang(Request $request, $lang)
+    public function updateLang(Request $request, $lang)
     {
         $languages = config('custom.languages');
         if (isset($languages[$lang])) {
@@ -33,8 +33,12 @@ class AccountController extends Controller
         ]);
     }
 
-    function myAccount()
+    public function myAccount()
     {
         return view('user.profile',['me' => true, 'user' => Auth::user()]);
+    }
+
+    public function updateAvatar () {
+
     }
 }
