@@ -187,6 +187,9 @@ return [
         /* DATA TABLES */
         Yajra\Datatables\DatatablesServiceProvider::class,
 
+        /* IMAGE WESH*/
+        Intervention\Image\ImageServiceProvider::class,
+
     ],
 
     /*
@@ -238,6 +241,7 @@ return [
         'Entrust'   => Zizaco\Entrust\EntrustFacade::class,
         'Uuid' => Webpatser\Uuid\Uuid::class,
         'Datatables' => Yajra\Datatables\Facades\Datatables::class,
+        'Image' => Intervention\Image\Facades\Image::class,
 
     ],
 
