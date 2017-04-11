@@ -5,7 +5,7 @@
         <div class="modal fade" id="update-avatar">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <form method="post" role="form" id="form_avatar" action="/test">
+                    <form method="post" role="form" id="form_avatar" action="/account/update/avatar">
 
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>

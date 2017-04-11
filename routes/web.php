@@ -26,6 +26,7 @@ Route::group(['prefix' => 'account'], function ()
     Route::group(['prefix' => "update"], function ()
     {
         Route::get('/lang/{lang}', ["uses" => "AccountController@updateLang", "as" => "lang"]);
+        Route::post('/avatar', "AccountController@updateAvatar");
     });
 });
 
