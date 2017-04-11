@@ -2,6 +2,7 @@
 
 @section('content')
     <div class="profile-env">
+        @if($me)
         <div class="modal fade" id="update-avatar">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -55,6 +56,7 @@
                 </div>
             </div>
         </div>
+        @endif
         <header class="row">
 
             <div class="col-sm-2">
