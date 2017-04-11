@@ -25,37 +25,67 @@
 
     <br/>
 
-    <table class="table table-bordered datatable" id="users-table">
-        <thead>
-        <tr>
-            <th>ID</th>
-            <th>Username</th>
-            <th>Name</th>
-            <th>Email</th>
-        </tr>
-        </thead>
-        <tbody>
+    <div class="member-entry">
 
-        </tbody>
-        <tfoot>
-        <tr>
-            <th>ID</th>
-            <th>Username</th>
-            <th>Name</th>
-            <th>Email</th>
-        </tr>
-        </tfoot>
-    </table>
+        <a href="/" class="member-img">
+            <img src="/assets/images/member-1.jpg" class="img-rounded" />
+            <i class="entypo-forward"></i>
+        </a>
+
+        <div class="member-details">
+            <h4>
+                <a href="extra-timeline.html">Leonora Murtha</a>
+            </h4>
+
+            <!-- Details with Icons -->
+            <div class="row info-list">
+
+                <div class="col-sm-4">
+                    <i class="entypo-briefcase"></i>
+                    Surgeons at <a href="#">Tons O' Toys</a>
+                </div>
+
+                <div class="col-sm-4">
+                    <i class="entypo-twitter"></i>
+                    <a href="#">@foromed</a>
+                </div>
+
+                <div class="col-sm-4">
+                    <i class="entypo-facebook"></i>
+                    <a href="#">fb.me/LeonoraAMurtha</a>
+                </div>
+
+                <div class="clear"></div>
+
+                <div class="col-sm-4">
+                    <i class="entypo-location"></i>
+                    <a href="#">Manila</a>
+                </div>
+
+                <div class="col-sm-4">
+                    <i class="entypo-mail"></i>
+                    <a href="#">LeonoraAMurtha@dayrep.com</a>
+                </div>
+
+                <div class="col-sm-4">
+                    <i class="entypo-linkedin"></i>
+                    <a href="#">LeonoraAMurtha</a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
 
     @push('css')
-    <!-- Datatables -->
+    <!--
     <link rel="stylesheet" href="/assets/js/datatables/datatables.css">
     <link rel="stylesheet" href="/assets/js/select2/select2-bootstrap.css">
-    <link rel="stylesheet" href="/assets/js/select2/select2.css">
+    <link rel="stylesheet" href="/assets/js/select2/select2.css">Datatables -->
     @endpush
 
     @push('scripts')
-    <!-- Datatables -->
+    <!--
     <script src="/assets/js/jquery.dataTables.js"></script>
     <script src="/assets/js/datatables/datatables.js"></script>
     <script src="/assets/js/select2/select2.min.js"></script>
@@ -83,6 +113,6 @@
                 ]
             });
         });
-    </script>
+    </script>Datatables -->
     @endpush
 @endsection
