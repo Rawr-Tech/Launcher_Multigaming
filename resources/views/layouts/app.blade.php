@@ -73,7 +73,6 @@
 <link rel="stylesheet" href="/assets/js/rickshaw/rickshaw.min.css">
 
 <!-- Bottom scripts (common) -->
-<script src="/assets/js/jvectormap/jquery-jvectormap-europe-merc-en.js"></script>
 <script src="/assets/js/gsap/TweenMax.min.js"></script>
 <script src="/assets/js/jquery-ui/js/jquery-ui-1.10.3.minimal.min.js"></script>
 <script src="/assets/js/bootstrap.js"></script>
@@ -81,6 +80,7 @@
 <script src="/assets/js/resizeable.js"></script>
 <script src="/assets/js/neon-api.js"></script>
 <script src="/assets/js/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+-<script src="/assets/js/jvectormap/jquery-jvectormap-europe-merc-en.js"></script>
 
 
 <!-- Imported scripts on this page -->
