@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "fc744516a86ed1107efb210ee5404ab8",
+    "content-hash": "d972c8b4f7c4f79402451baf13c2da71",
     "packages": [
         {
             "name": "barryvdh/laravel-ide-helper",
@@ -3843,16 +3843,16 @@
         },
         {
             "name": "zizaco/entrust",
-            "version": "5.2.x-dev",
+            "version": "1.9.0-beta1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Zizaco/entrust.git",
-                "reference": "3623cc052937d9e62543402b50f24065720d44b9"
+                "reference": "2a05acd5f2a81afdfc87ae41340dae26f585ed1d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Zizaco/entrust/zipball/3623cc052937d9e62543402b50f24065720d44b9",
-                "reference": "3623cc052937d9e62543402b50f24065720d44b9",
+                "url": "https://api.github.com/repos/Zizaco/entrust/zipball/2a05acd5f2a81afdfc87ae41340dae26f585ed1d",
+                "reference": "2a05acd5f2a81afdfc87ae41340dae26f585ed1d",
                 "shasum": ""
             },
             "require": {
@@ -3907,13 +3907,13 @@
                 "permission",
                 "roles"
             ],
-            "time": "2016-12-29T06:25:06+00:00"
+            "time": "2017-04-10T16:22:12+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "zizaco/entrust": 20
+        "zizaco/entrust": 10
     },
     "prefer-stable": false,
     "prefer-lowest": false,
