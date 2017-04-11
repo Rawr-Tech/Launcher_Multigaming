@@ -46,10 +46,13 @@ class AccountController extends Controller
             $user = Auth::user();
             $uid= $user->id;
             $filename = $uid . '.' . $avatar->getClientOriginalExtension();
-            Image::make($avatar)->resize(300, 300)->save( public_path('/upload/avatars/' . $filename ) );
+            Image::make($avatar)->resize(150, 150)->save( public_path('/upload/avatars/' . $filename ) );
             $user->avatar = $filename;
             $user->save();
         }
-        return view('user.profile',['me' => true, 'user' => Auth::user()]);
+
+        return redirect()->action(
+            'AccountController@myAccount'
+        );
     }
 }

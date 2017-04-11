@@ -5,7 +5,8 @@
         <div class="modal fade" id="update-avatar">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <form method="post" role="form" id="form_avatar" action="/account/update/avatar">
+                    <form method="post" role="form" id="form_avatar" enctype="multipart/form-data" action="/account/update/avatar">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
