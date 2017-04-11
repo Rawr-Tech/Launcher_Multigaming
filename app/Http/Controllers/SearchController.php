@@ -3,17 +3,31 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Yajra\Datatables\Datatables;
+use App\User;
 
 class SearchController extends Controller
 {
-    function __construct()
+    public function __construct()
     {
         $this->middleware('auth');
     }
 
-    function searchView(Request $request, $type)
+    public function searchView(Request $request)
     {
+        return view('search', ['search_for' => 'none']);
+    }
 
-        return view('search');
+    public function searchUser(Request $request)
+    {
+        if ($request->wantsJson())
+        {
+            return Datatables::of(User::query())->make(true);
+        }
+        else
+        {
+            return view('search', ['search_for' => 'user']);
+        }
+
     }
 }

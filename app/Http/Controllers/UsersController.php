@@ -7,14 +7,16 @@ use App\User;
 
 class UsersController extends Controller
 {
-    function __construct()
+    public function __construct()
     {
         $this->middleware('auth');
     }
 
-    function profile(Request $request, $id)
+    public function profile(Request $request, $id)
     {
         $user = User::findOrFail($id);
         return view('user.profile', ['me' => false, 'user' => $user]);
     }
+
+
 }

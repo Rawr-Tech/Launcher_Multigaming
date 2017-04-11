@@ -60,12 +60,16 @@ var neonLogin = neonLogin || {};
 					neonLogin.setPercentage(40 + random_pct);
 											
 					// Send data to the server
+                    $.ajaxSetup({
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        }
+                    });
 					$.ajax({
 						url: '/login',
 						method: 'POST',
 						dataType: 'json',
 						data: {
-							_token: $('meta[name=_token]').attr('content'),
 							username: $("input#username").val(),
 							password: $("input#password").val(),
 						},
