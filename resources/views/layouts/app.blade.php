@@ -68,8 +68,6 @@
 
 </div>
 
-@stack('scripts')
-
 <!-- Imported styles on this page -->
 <link rel="stylesheet" href="/assets/js/jvectormap/jquery-jvectormap-1.2.2.css">
 <link rel="stylesheet" href="/assets/js/rickshaw/rickshaw.min.css">
@@ -100,9 +98,10 @@
 <script src="/assets/js/neon-custom.js"></script>
 <script src="/assets/js/fileinput.js"></script>
 
-
 <!-- Demo Settings -->
 <script src="/assets/js/neon-demo.js"></script>
+
+@stack('scripts')
 
 </body>
 </html>
