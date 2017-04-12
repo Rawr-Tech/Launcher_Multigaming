@@ -13,9 +13,19 @@ class SearchController extends Controller
         $this->middleware('auth');
     }
 
-    public function searchView(Request $request)
+    public function search(Request $request)
     {
-        return view('search', ['search_for' => 'none']);
+        if ($request->wantsJson())
+        {
+            $result = array();
+            $result['users'] = User::search($request->get('search'))->get();
+            $result['users_total'] = count($result['users']);
+            return ($result);
+        }
+        else
+        {
+            return view('search', ['search_for' => 'none']);
+        }
     }
 
     public function searchUser(Request $request)

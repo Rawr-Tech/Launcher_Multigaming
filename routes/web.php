@@ -44,5 +44,6 @@ Route::group(['prefix' => 'search'], function()
     Route::get('/user', "SearchController@searchUser");
     Route::post('/user', "SearchController@searchUser");
 
-    Route::get('/', "SearchController@searchView");
+    Route::get('/', "SearchController@search");
+    Route::post('/', "SearchController@search");
 });

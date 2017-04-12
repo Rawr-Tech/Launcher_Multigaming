@@ -190,6 +190,12 @@ return [
         /* IMAGE WESH*/
         Intervention\Image\ImageServiceProvider::class,
 
+        /* LARAVEL SCOUTER */
+        Laravel\Scout\ScoutServiceProvider::class,
+
+        /* SCOUT MYSQL DRIVER */
+        DamianTW\MySQLScout\Providers\MySQLScoutServiceProvider::class,
+
     ],
 
     /*

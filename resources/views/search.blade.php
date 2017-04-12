@@ -1,80 +1,124 @@
 @extends('layouts.app')
 
 @section('content')
-
-    <ol class="breadcrumb bc-3">
-        <li>
-            <a href="/"><i class="fa-home"></i>Home</a>
-        </li>
-        <li @if ($search_for == "none") class="active" @endif>
-            <a href="/search">Search</a>
-        </li>
-        @if ($search_for != "none")
-            <li class="active">
-                @if ($search_for == "user")
-                    <strong>Users</strong>
-
-                @endif
+    <div class="col-md-12">
+        <ol class="breadcrumb bc-3">
+            <li>
+                <a href="/"><i class="fa-home"></i>Home</a>
             </li>
-        @endif
-    </ol>
+            <li class="active">
+                <a href="/search">Search</a>
+            </li>
+        </ol>
 
-    @if($search_for == "user")
-        <h2>List of all users</h2>
-    @endif
+        <br/>
 
-    <br/>
+        <section class="search-results-env">
 
-    <div class="member-entry">
+            <div class="row">
+                <div class="col-md-12">
 
-        <a href="/" class="member-img">
-            <img src="/assets/images/member-1.jpg" class="img-rounded" />
-            <i class="entypo-forward"></i>
-        </a>
 
-        <div class="member-details">
-            <h4>
-                <a href="extra-timeline.html">Leonora Murtha</a>
-            </h4>
+                    <!-- Search categories tabs -->
+                    <ul class="nav nav-tabs right-aligned hide">
+                        <li class="tab-title pull-left">
+                            <div class="search-string">10 results found for: <strong>“this”</strong></div>
+                        </li>
+                    </ul>
 
-            <!-- Details with Icons -->
-            <div class="row info-list">
+                    <!-- Search search form -->
+                    <form id="search-form" class="search-bar">
 
-                <div class="col-sm-4">
-                    <i class="entypo-briefcase"></i>
-                    Surgeons at <a href="#">Tons O' Toys</a>
+                        <div class="input-group">
+                            <input id="search-input" class="form-control input-lg" name="search" placeholder="Search for something..."
+                                   type="text" @if (Request::has('search')) value="{{ Request::get('search') }}" @endif>
+
+                            <div class="input-group-btn">
+                                <button type="submit" class="btn btn-lg btn-primary btn-icon">
+                                    Search
+                                    <i class="entypo-search"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                    </form>
+
+
+                    <!-- Search search form -->
+
+
                 </div>
+            </div>
 
-                <div class="col-sm-4">
-                    <i class="entypo-twitter"></i>
-                    <a href="#">@foromed</a>
+        </section>
+
+
+        <div class="col-md-9 col-sm-12 col-lg-8" id="search-result">
+            @for($i = 0; $i < 10; $i++)
+                <div class="member-entry">
+
+                    <a href="/" class="member-img">
+                        <img src="/assets/images/member-1.jpg" class="img-rounded"/>
+                        <i class="entypo-forward"></i>
+                    </a>
+
+                    <div class="member-details">
+                        <h4>
+                            <a href="/">Leonora Murtha</a>
+                        </h4>
+
+                        <!-- Details with Icons -->
+                        <div class="row info-list">
+
+                            <div class="col-sm-4">
+                                <i class="entypo-briefcase"></i>
+                                Surgeons at <a href="#">Tons O' Toys</a>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <i class="entypo-twitter"></i>
+                                <a href="#">@foromed</a>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <i class="entypo-facebook"></i>
+                                <a href="#">fb.me/LeonoraAMurtha</a>
+                            </div>
+
+                            <div class="clear"></div>
+
+                            <div class="col-sm-4">
+                                <i class="entypo-location"></i>
+                                <a href="#">Manila</a>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <i class="entypo-mail"></i>
+                                <a href="#">LeonoraAMurtha@dayrep.com</a>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <i class="entypo-linkedin"></i>
+                                <a href="#">LeonoraAMurtha</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            @endfor
+        </div>
 
-                <div class="col-sm-4">
-                    <i class="entypo-facebook"></i>
-                    <a href="#">fb.me/LeonoraAMurtha</a>
+        <div class="col-md-3 col-sm-12 col-lg-4">
+
+            <div class="member-entry">
+                <div class="text-center">
+                    <h4>Options avancées</h4>
                 </div>
+                <hr/>
 
-                <div class="clear"></div>
-
-                <div class="col-sm-4">
-                    <i class="entypo-location"></i>
-                    <a href="#">Manila</a>
-                </div>
-
-                <div class="col-sm-4">
-                    <i class="entypo-mail"></i>
-                    <a href="#">LeonoraAMurtha@dayrep.com</a>
-                </div>
-
-                <div class="col-sm-4">
-                    <i class="entypo-linkedin"></i>
-                    <a href="#">LeonoraAMurtha</a>
-                </div>
+                Rechercher par: DROPBOX
 
             </div>
         </div>
-
     </div>
 
     @push('css')
@@ -85,34 +129,45 @@
     @endpush
 
     @push('scripts')
-    <!--
-    <script src="/assets/js/jquery.dataTables.js"></script>
-    <script src="/assets/js/datatables/datatables.js"></script>
-    <script src="/assets/js/select2/select2.min.js"></script>
     <script>
+        var locked = false;
         $(function () {
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                }
-            });
-            $('#users-table').DataTable({
-                aLengthMenu: [[10, 25, 50, -1], [10, 25, 50, "All"]],
-                bStateSave: true,
-                processing: true,
-                serverSide: true,
-                ajax: {
+            $('#search-form').on('submit', function () {
+                if (locked == true)
+                    return (false);
+                locked = true;
+                $('#search-result').html('<div class="member-entry text-center"> <h2>Chargement...</h2> </div>');
+                window.history.pushState(null, null, "/search?search=" + $("input#search-input").val());
+                show_loading_bar(64);
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+                $.ajax({
+                    url: '/search',
+                    method: 'POST',
                     dataType: 'json',
-                    method: 'POST'
-                },
-                columns: [
-                    {data: 'id', name: 'id'},
-                    {data: 'username', name: 'username'},
-                    {data: 'name', name: 'name'},
-                    {data: 'email', name: 'email'}
-                ]
+                    data: {
+                        search: $("input#search-input").val()
+                    },
+                    error: function(response)
+                    {
+                        locked = false;
+                        console.log(response);
+                        alert("Error intern, contact an administator !");
+                    },
+                    success: function(response)
+                    {
+                        locked = false;
+                        $('#search-result').html('<div class="member-entry text-center"> <h2>' + response.users_total + ' </h2> </div>');
+                        show_loading_bar(100);
+
+                    }
+                });
+                return (false);
             });
         });
-    </script>Datatables -->
+    </script>
     @endpush
 @endsection

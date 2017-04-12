@@ -4,10 +4,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="{{ config('app.name') }} Admin Panel" />
-    <meta name="author" content="MrDarkSkil" />
-    <meta name="csrf-token" content="{{ csrf_token() }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="{{ config('app.name') }} Admin Panel"/>
+    <meta name="author" content="MrDarkSkil"/>
+    <meta name="csrf-token" content="{{ csrf_token() }}"/>
 
     <link rel="icon" href="/assets/images/favicon.ico">
 
@@ -31,7 +31,8 @@
     <!-- SweetAlert load -->
     <script src="/assets/js/alerts/sweetalert.min.js"></script>
 
-    <!--[if lt IE 9]><script src="/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!--[if lt IE 9]>
+    <script src="/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -43,7 +44,8 @@
 </head>
 <body class="page-body page-fade" data-url="/">
 
-<div class="page-container"><!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->
+<div class="page-container">
+    <!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->
 
     @include('inc.sidebar')
 
@@ -51,10 +53,10 @@
 
         @include('inc.header')
 
-
-        <hr />
-
         @yield('content')
+
+        <hr/>
+
 
         @include('inc.footer')
 
@@ -80,7 +82,8 @@
 <script src="/assets/js/resizeable.js"></script>
 <script src="/assets/js/neon-api.js"></script>
 <script src="/assets/js/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
--<script src="/assets/js/jvectormap/jquery-jvectormap-europe-merc-en.js"></script>
+-
+<script src="/assets/js/jvectormap/jquery-jvectormap-europe-merc-en.js"></script>
 
 
 <!-- Imported scripts on this page -->

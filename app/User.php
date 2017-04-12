@@ -6,10 +6,12 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Zizaco\Entrust\Traits\EntrustUserTrait;
 use Webpatser\Uuid\Uuid;
+use Laravel\Scout\Searchable;
 
 class User extends Authenticatable
 {
     use Notifiable;
+    use Searchable;
     use EntrustUserTrait, Uuids
     {
         Uuids::boot insteadof EntrustUserTrait;
@@ -40,5 +42,19 @@ class User extends Authenticatable
         $user->confirmed = 1;
         $user->confirmation_token = null;
         $user->save();
+    }
+
+    public function searchableAs()
+    {
+        return 'username';
+    }
+
+    public function toSearchableArray()
+    {
+        $array = $this->toArray();
+
+        // Customize array...
+
+        return $array;
     }
 }
