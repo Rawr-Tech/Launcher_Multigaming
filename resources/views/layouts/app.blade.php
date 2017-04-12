@@ -40,6 +40,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <script src="//localhost:6001/socket.io/socket.io.js"></script>
 
 </head>
 <body class="page-body page-fade" data-url="/">
@@ -100,6 +101,7 @@
 
 <!-- Demo Settings -->
 <script src="/assets/js/neon-demo.js"></script>
+<script src="/assets/js/script/neon-demo.js"></script>
 
 @stack('scripts')
 

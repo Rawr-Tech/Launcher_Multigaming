@@ -11,7 +11,9 @@
 */
 
 Auth::routes();
-
+Route::get('/test-event', function () {
+    return event(new \App\Events\TestEvent('test'));
+});
 Route::get('/', 'HomeController@index');
 Route::get('/home', function()
 {

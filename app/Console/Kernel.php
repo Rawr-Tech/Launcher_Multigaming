@@ -14,7 +14,8 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         Commands\StopDockerCommand::class,
-        Commands\StartDockerCommand::class
+        Commands\StartDockerCommand::class,
+        Commands\StartSocketCommand::class
     ];
 
     /**
