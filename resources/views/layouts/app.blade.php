@@ -101,7 +101,7 @@
 
 <!-- Demo Settings -->
 <script src="/assets/js/neon-demo.js"></script>
-<script src="/assets/js/script/neon-demo.js"></script>
+<script src="/assets/js/script/app.js"></script>
 
 @stack('scripts')
 
