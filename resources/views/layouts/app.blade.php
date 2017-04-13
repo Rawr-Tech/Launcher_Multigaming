@@ -105,5 +105,20 @@
 
 @stack('scripts')
 
+
+<script>
+    $(function () {
+
+        $(document).keypress(function (event) {
+            if (event.which == 97)
+            {
+                var audio = new Audio('/assets/AH.ogg');
+                audio.play();
+            }
+
+        });
+    });
+</script>
+
 </body>
 </html>
