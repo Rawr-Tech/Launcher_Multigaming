@@ -37,6 +37,6 @@ class StartSocketCommand extends Command
      */
     public function handle()
     {
-        return null;//shell_exec("cd laradock/ && docker-compose exec workspace bash -c 'laravel-echo-server start'");
+        return shell_exec("npm run socket");
     }
 }
