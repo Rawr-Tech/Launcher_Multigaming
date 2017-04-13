@@ -8,6 +8,7 @@
     <meta name="description" content="{{ config('app.name') }} Admin Panel"/>
     <meta name="author" content="MrDarkSkil"/>
     <meta name="csrf-token" content="{{ csrf_token() }}"/>
+    <meta name="username" content="{{ Auth::user()->username }}"/>
 
     <link rel="icon" href="/assets/images/favicon.ico">
 
@@ -101,7 +102,7 @@
 
 <!-- Demo Settings -->
 <script src="/assets/js/neon-demo.js"></script>
-<script src="/assets/js/script/app.js"></script>
+<script src="/assets/js/scripts/app.js"></script>
 
 @stack('scripts')
 

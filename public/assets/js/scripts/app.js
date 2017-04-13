@@ -68,28 +68,6 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_laravel_echo__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_laravel_echo___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_laravel_echo__);
-/**
- * Created by wirk on 12/04/17.
- */
-
-
-window.Echo = new __WEBPACK_IMPORTED_MODULE_0_laravel_echo___default.a({
-    broadcaster: 'socket.io',
-    host: 'localhost:6001'
-});
-
-window.Echo.channel('test').listen('TestEvent', function (e) {
-    console.log(e.test_prop);
-});
-
-/***/ }),
-/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -10316,6 +10294,42 @@ return jQuery;
 
 
 /***/ }),
+/* 1 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function($) {Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_laravel_echo__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_laravel_echo___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_laravel_echo__);
+/**
+ * Created by wirk on 12/04/17.
+ */
+
+
+window.Echo = new __WEBPACK_IMPORTED_MODULE_0_laravel_echo___default.a({
+    broadcaster: 'socket.io',
+    host: 'localhost:6001'
+});
+
+window.Echo.channel('test').listen('TestEvent', function (e) {
+    console.log(e.test_prop);
+});
+
+window.Echo.join('chat').here(function (users) {
+    users.forEach(function (element) {
+        var username = $('meta[name="username"]').attr('content');
+        if (username !== element.name) {
+            $('#group-1').append('<a id="' + element.id + '" href="/user/' + element.id + '"><span class="user-status is-online"></span> <em>' + element.name + '</em></a>');
+        }
+    });
+}).joining(function (user) {
+    $('#group-1').append('<a id="' + user.id + '" href="/user/' + user.id + '"><span class="user-status is-online"></span> <em>' + user.name + '</em></a>');
+}).leaving(function (user) {
+    $('#' + user.id).remove();
+});
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
+
+/***/ }),
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11087,13 +11101,13 @@ var Echo = function () {
 }();
 
 module.exports = Echo;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(0);
+module.exports = __webpack_require__(1);
 
 
 /***/ })
