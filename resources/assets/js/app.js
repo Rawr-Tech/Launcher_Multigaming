@@ -16,7 +16,7 @@ window.Echo.channel('test')
 window.Echo.join(`chat`)
     .here((users) => {
         users.forEach((element) => {
-            let username = $('meta[name="username"]').attr('content');
+            let username = $('#chat').attr('data-current-user');
             if (username !== element.name) {
                 $('#group-1').append('<a id="' + element.id + '" href="/user/'+ element.id +'"><span class="user-status is-online"></span> <em>' + element.name +'</em></a>');
             }

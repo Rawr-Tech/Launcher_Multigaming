@@ -1,4 +1,4 @@
-<div id="chat" class="fixed" data-current-user="Art Ramadani" data-order-by-status="1" data-max-chat-history="25">
+<div id="chat" class="fixed" data-current-user="{{ Auth::user()->username }}" data-order-by-status="1" data-max-chat-history="25">
 
     <div class="chat-inner">
 

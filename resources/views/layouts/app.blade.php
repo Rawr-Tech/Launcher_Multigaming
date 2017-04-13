@@ -8,7 +8,6 @@
     <meta name="description" content="{{ config('app.name') }} Admin Panel"/>
     <meta name="author" content="MrDarkSkil"/>
     <meta name="csrf-token" content="{{ csrf_token() }}"/>
-    <meta name="username" content="{{ Auth::user()->username }}"/>
 
     <link rel="icon" href="/assets/images/favicon.ico">
 
