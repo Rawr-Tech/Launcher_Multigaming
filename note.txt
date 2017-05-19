@@ -8,4 +8,5 @@ Si il n'y a pas de .json sur le serveur (check)
 Si le lien du site est incorrect (check)
 
 
-TEST
+TEST // botker smells
+
