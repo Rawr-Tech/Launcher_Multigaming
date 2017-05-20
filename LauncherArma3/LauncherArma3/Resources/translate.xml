@@ -1,104 +1,103 @@
 <?xml version="1.0"?>
 <user>
   <FR language="Français">
-    <languageTitle>Choisissez votre langage</languageTitle>
-    <contry>France</contry>
-    <money>fr-FR</money>
+    <languageTitle>Vælg dit sprog</languageTitle>
+    <contry>Danmark</contry>
+    <money>en-US</money>
     <reverse>false</reverse>
-    <logIn>Se connecter</logIn>
-    <logOut>Se deconnecter</logOut>
-    <remember>Se rappeler de moi</remember>
-    <loginMsg>Déjà enregistré ?</loginMsg>
-    <registerLink>ou s'enregistrer</registerLink>
-    <commingSoon>Prochainement</commingSoon>
-    <registerMsg>Nouveau sur notre communautée ?</registerMsg>
-    <username>Nom d'utilisateur</username>
-    <password>Mot de passe</password>
-    <passwordConfirm>Confirmez le mot de passe</passwordConfirm>
-    <email>E-mail</email>
-    <cancel>Annuler</cancel>
-    <register>S'enregistré</register>
-    <forgotPass>J'ai oublié mon mot de passe</forgotPass>
+    <logIn>Log Ind</logIn>
+    <logOut>Log ud</logOut>
+    <remember>Husk mig</remember>
+    <loginMsg>Allerede registreret ?</loginMsg>
+    <registerLink>eller registrer</registerLink>
+    <commingSoon>Kommer snart</commingSoon>
+    <registerMsg>Ny i vores community ?</registerMsg>
+    <username>Brugernavn</username>
+    <password>Adgangskode</password>
+    <passwordConfirm>Bekræft Adgangskode</passwordConfirm>
+    <email>Email</email>
+    <cancel>Afbryd</cancel>
+    <register>Registrer</register>
+    <forgotPass>Glemt adgangskode ?</forgotPass>
     <status>Status</status>
-    <disconnectMsg>Vous êtes bien déconnecté</disconnectMsg>
-    <maintenanceTitle>Maintenance en cours !</maintenanceTitle>
-    <registerDisabled>Enregistrement désactivé</registerDisabled>
-    <error404>Le serveur n'est pas accéssible.</error404>
-    <errorInternet>Vous n'avez pas internet</errorInternet>
-    <errorUpdate>Erreur launcherUpdate.exe manquant !</errorUpdate>
-    <updateCancel>Mise à jour annulé</updateCancel>
-    <!-- NEW TRANSLATE HERE-->
-    <settings>Paramètres</settings>
+    <disconnectMsg>Du har logget ud</disconnectMsg>
+    <maintenanceTitle>Vedligeholdelse igang !</maintenanceTitle>
+    <registerDisabled>Registrering deaktiveret</registerDisabled>
+    <error404>Serveren er ikke tilgængelig.</error404>
+    <errorInternet>Du har ikke noget internet</errorInternet>
+    <errorUpdate>Fejl! launcherUpdate.exe ikke fundet !</errorUpdate>
+    <updateCancel>Opdatering Afbrudt</updateCancel>
+    <settings>Indstillinger</settings>
     <steamUID>Steam UID</steamUID>
     <mission>Mission</mission>
-    <online>EN LIGNE</online>
-    <offline>HORS LIGNE</offline>
-    <notFound>Non disponible</notFound>
+    <online>ONLINE</online>
+    <offline>OFFLINE</offline>
+    <notFound>Ikke fundet</notFound>
     <support>Support</support>
-    <taskforceVersion>Version de taskforce</taskforceVersion>
-    <notInstalled>Non installée</notInstalled>
-    <installed>Installée</installed>
-    <updateTaskforceRequire>Mise à jour de taskforce requise</updateTaskforceRequire>
-    <forceUpdateTaskforce>Forcer la mise à jour</forceUpdateTaskforce>
-    <installTaskforce>Installer Taksforce</installTaskforce>
-    <updateTaskforce>Mettre à jour TaskForce</updateTaskforce>
-    <play>Jouer</play>
-    <download>Télécharger</download>
-    <update>Mettre à jour</update>
-    <forceUpdate>Forcer la mise à jour</forceUpdate>
-    <visitSite>Visiter notre site</visitSite>
-    <visitTeamSpeak>Visiter notre TeamSpeak</visitTeamSpeak>
-    <modDev>Attention ! ModDev activé !</modDev>
-    <chooseArma>Choisissez la destination d'arma 3</chooseArma>
-    <downloadProgress>Téléchargement en cours</downloadProgress>
-    <armaOK>La destination d'arma 3 est OK</armaOK>
-    <selectArma>Selectionner la destination d'arma 3</selectArma>
-    <armaNotOK>La destination d'arma 3 n'est pas bonne</armaNotOK>
-    <success>Succés !</success>
-    <waitDownload>Veuillez attendre la fin du téléchargement des mods !</waitDownload>
-    <updateTaskforceBefore>Veuillez mettre à jour taskforce avant cela !</updateTaskforceBefore>
-    <downloadInitialisation>Initialisation du téléchargement</downloadInitialisation>
-    <pleaseWait>Veuillez patientez</pleaseWait>
-    <cancelling>Annulation...</cancelling>
+    <taskforceVersion>Task Force version</taskforceVersion>
+    <notInstalled>Ikke installeret</notInstalled>
+    <installed>Installeret</installed>
+    <updateTaskforceRequire>Opdatering af Task Force Radio påkrævet</updateTaskforceRequire>
+    <forceUpdateTaskforce>Force opdater Task Force</forceUpdateTaskforce>
+    <installTaskforce>Installer Task Force</installTaskforce>
+    <updateTaskforce>Opdater TaskForce</updateTaskforce>
+    <play>Spil</play>
+    <download>Download</download>
+    <update>Opdater</update>
+    <forceUpdate>Force Opdater</forceUpdate>
+    <visitSite>Besøg vores hjemmeside</visitSite>
+    <visitTeamSpeak>Besøg vores teamspeak</visitTeamSpeak>
+    <modDev>Advarsel ! ModDev slået til !</modDev>
+    <chooseArma>Vælg arma 3 directory</chooseArma>
+    <downloadProgress>Download igang</downloadProgress>
+    <armaOK>Arma 3 destination er OK</armaOK>
+    <selectArma>Vælg arma 3 directory</selectArma>
+    <armaNotOK>Arma 3 destination er OK</armaNotOK>
+    <success>Success !</success>
+    <waitDownload>Vent indtil den igangværende download er færdig</waitDownload>
+    <updateTaskforceBefore>Venligst opdater Task Force before</updateTaskforceBefore>
+    <downloadInitialisation>Download Started</downloadInitialisation>
+    <pleaseWait>Vent venligst</pleaseWait>
+    <cancelling>Afbryder...</cancelling>
     <pause>Pause</pause>
-    <resume>Continuer</resume>
-    <serverRequest>Requête au serveur en cours</serverRequest>
-    <listingMod>Création de la list des mods en cours</listingMod>
-    <listingCpp>Création de la list des cpps en cours</listingCpp>
-    <listingAdditional>Création de la list des autres fichier en cours</listingAdditional>
-    <alreadyUpToDate>Tout est à jour, vous pouvez jouer</alreadyUpToDate>
-    <inProgress>en cours</inProgress>
-    <downloadMod>Téléchargement du mod</downloadMod>
-    <downloadFile>Téléchargement du fichier</downloadFile>
-    <checkMod>Vérification des mods</checkMod>
-    <checkCpp>Vérification des cpps</checkCpp>
-    <downloadStoped>Téléchargement stopé</downloadStoped>
-    <downloadFinish>Téléchargement terminé</downloadFinish>
-    <downloadWillPause>Le téléchargement va se mettre en pause</downloadWillPause>
-    <downloadPaused>Téléchargement mis en pause</downloadPaused>
-    <downloaded>Téléchargé(s)</downloaded>
-    <of>sur</of>
-    <estimatedTime>Temps estimé</estimatedTime>
-    <waitForDownload>En attente du téléchargement</waitForDownload>
-    <updateAvailable>Mise à jour disponible</updateAvailable>
-    <errorListing>Une erreur est survenue durant le listage des mods</errorListing>
-    <taskforceInstallerMissing>Il manque l'installateur du taskforce</taskforceInstallerMissing>
-    <installCancel>Installation annulée</installCancel>
-    <minutes>Minutes</minutes>
-    <seconds>Secondes</seconds>
-    <hours>Heurs</hours>
-    <playersIG>Joueurs en ligne</playersIG>
-    <map>Carte</map>
-    <adminLevel>Level admin</adminLevel>
-    <copLevel>Level flic</copLevel>
-    <medicLevel>Level médecin</medicLevel>
-    <cash>Cash</cash>
-    <bank>Banque</bank>
-    <serverStatus>Statut du serveur</serverStatus>
-    <IGinformations>Informations en jeu</IGinformations>
-    <usefulLink>Liens utiles</usefulLink>
-    <serverMaintenance>Le serveur actuel est en maintenance !</serverMaintenance>
-    <serverLocked>Serveur verrouillé</serverLocked>
+    <resume>Fortsæt</resume>
+    <serverRequest>Anmoder til serveren</serverRequest>
+    <listingMod>Viser alle mods at downloade</listingMod>
+    <listingCpp>Viser alle cpps at downloade</listingCpp>
+    <listingAdditional>Viser alle nødvendige filer der skal downloades</listingAdditional>
+    <alreadyUpToDate>Allerede opdateret, du kan spille nu!</alreadyUpToDate>
+    <inProgress>Igang</inProgress>
+    <downloadMod>Download mod</downloadMod>
+    <downloadFile>Download fil</downloadFile>
+    <checkMod>Tjekker alle mods</checkMod>
+    <checkCpp>Tjekker alle cpps</checkCpp>
+    <downloadStoped>Download stoppet</downloadStoped>
+    <downloadFinish>Download færdig</downloadFinish>
+    <downloadWillPause>Downloaden vil blive paused</downloadWillPause>
+    <downloadPaused>Download paused</downloadPaused>
+    <downloaded>Downloaded</downloaded>
+    <of>af</of>
+    <estimatedTime>Forventet tid</estimatedTime>
+    <waitForDownload>Venter på at downloade</waitForDownload>
+    <updateAvailable>Opdatering ledig</updateAvailable>
+    <errorListing>En fejl opstod da visning af filer skulle ske</errorListing>
+    <taskforceInstallerMissing>Mangler installeren til task force radio</taskforceInstallerMissing>
+    <installCancel>Installation Afbrudt</installCancel>
+    <minutes>Minuter</minutes>
+    <seconds>Sekunder</seconds>
+    <hours>Timer</hours>
+    <playersIG>Spillere Online</playersIG>
+    <map>Map</map>
+    <adminLevel>Admin level</adminLevel>
+    <copLevel>Betjent level</copLevel>
+    <medicLevel>Læge level</medicLevel>
+    <cash>Penge</cash>
+    <bank>Bank</bank>
+    <serverStatus>Server status</serverStatus>
+    <IGinformations>In game informationer</IGinformations>
+    <usefulLink>Nyttige links</usefulLink>
+    <serverMaintenance>Serveren er ved at blive vedligeholdt !</serverMaintenance>
+    <serverLocked>Server er låst</serverLocked>
   </FR>
   <EN language="English">
     <languageTitle>Select your language</languageTitle>
