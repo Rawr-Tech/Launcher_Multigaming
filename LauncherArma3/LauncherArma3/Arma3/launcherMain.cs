@@ -1717,6 +1717,11 @@ namespace LauncherArma3
             normalyClose = true;
             this.Close();
         }
+
+        private void IGplayer_cash_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
