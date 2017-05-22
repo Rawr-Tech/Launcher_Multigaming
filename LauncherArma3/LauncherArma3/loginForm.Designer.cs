@@ -192,7 +192,7 @@
             // loginLogo
             // 
             this.loginLogo.Image = ((System.Drawing.Image)(resources.GetObject("loginLogo.Image")));
-            this.loginLogo.Location = new System.Drawing.Point(362, 24);
+            this.loginLogo.Location = new System.Drawing.Point(362, 26);
             this.loginLogo.Name = "loginLogo";
             this.loginLogo.Size = new System.Drawing.Size(249, 64);
             this.loginLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

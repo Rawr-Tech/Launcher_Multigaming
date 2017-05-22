@@ -17,18 +17,18 @@ namespace LauncherArma3
         {
             /* GENERAL OPTIONS */
 
-            string communityName = "DaniaGaming";  /* Your serverName */
-            string apiUrl = "http://launcher.daniagaming.dk/"; /* Link to API launcher Arma 3 */
+            string communityName = "Emodyz";  /* Your serverName */
+            string apiUrl = "http://51.255.171.192:8080/"; /* Link to API launcher Arma 3 */
                         
             /* FTP NO FUNCTIONAL */
 
-            string ftp_url = "ftp://149.202.65.89";
-            string ftp_user = "anonymous";
-            string ftp_pass = "";
+            string ftp_url = "ftp://yoururl";
+            string ftp_user = "username";
+            string ftp_pass = "passwd";
            
             /* FTP NO FUNCTIONAL */
 
-            bool modDev = false;  /* enable or disable modDev */
+            bool modDev = true;  /* enable or disable modDev */
 
             /* ANOTHER VARIABLE */
 

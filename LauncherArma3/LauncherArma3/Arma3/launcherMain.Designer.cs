@@ -820,7 +820,6 @@
             this.IGplayer_cash.TabIndex = 38;
             this.IGplayer_cash.Text = "NULL";
             this.IGplayer_cash.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.IGplayer_cash.Click += new System.EventHandler(this.IGplayer_cash_Click);
             // 
             // IGplayerLabel_mediclevel
             // 
@@ -1151,7 +1150,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1002, 500);
+            this.ClientSize = new System.Drawing.Size(1000, 500);
             this.Controls.Add(this.notificationNumber);
             this.Controls.Add(this.changeGameButton);
             this.Controls.Add(this.playButton);
